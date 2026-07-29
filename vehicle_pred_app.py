@@ -3,6 +3,10 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
+import sklearn
+from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
+from sklearn.preprocessing import RobustScaler
+
 # 1. PAGE CONFIGURATION & STYLING
 st.set_page_config(page_title="Used Car Price Predictor", layout="wide")
 
