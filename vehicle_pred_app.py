@@ -81,7 +81,7 @@ with col1:
     with c1:
         # Left Column - Dropdown Boxes
         brand = st.selectbox("Brand", brands)
-        engine = st.selectbox("Engine Capacity", engines)
+        engine = st.selectbox("Engine Capacity (L)", engines)
         body_type = st.selectbox("Body Type", body_types)
         fuel_type = st.selectbox("Fuel Type", fuel_types)
         
@@ -97,7 +97,10 @@ with col1:
         emission_class = st.selectbox("Emission Class (Euro)", emission_classes)
 with col2:
     st.subheader("Estimated Value (£)")
-    st.info("NOTE : This prediction is an only an estimate based on the displayed circumstances. Actual resale prices may vary.")
+    st.warning("NOTE : This prediction is an only an estimate based on the displayed circumstances. Actual resale prices may vary.")
+    st.info("Model : If your vehicle model is not listed, please select 'Others' as your model.\n\n" \
+            "Body Type : Select the general category of the Body Type of the vehicle. If you're unsure, select 'Others'.\n"
+            )
     
     st.write("") 
     st.write("")
